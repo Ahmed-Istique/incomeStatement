@@ -10,24 +10,24 @@ The core objective is to systematically evaluate the impact of feature engineeri
 
 # 📊 Dataset
 
-1. Source: U.S. Census Bureau
+**1. Source:** U.S. Census Bureau
 
-2. Samples: 48,842 instances
+**2. Samples:** 48,842 instances
 
-3. Features: 14 demographic, educational, and employment-related attributes
+**3. Features:** 14 demographic, educational, and employment-related attributes
 
-4. Target Variable: Binary classification of income as either "<=50K" or ">50K"
+**4. Target Variable:** Binary classification of income as either "<=50K" or ">50K"
 
    
 
 # Key Features
-Demographic: age, workclass, race, gender
+**1. Demographic:** age, workclass, race, gender
 
-Educational: education level, educational-num
+**2. Educational:** education level, educational-num
 
-Employment: occupation, hours-per-week
+**3. Employment:** occupation, hours-per-week
 
-Financial: capital-gain, capital-loss
+**4. Financial:** capital-gain, capital-loss
 
 # 🛠️ Methodology
 Data Preprocessing
@@ -40,62 +40,64 @@ Log transformation for skewed features
 Class imbalance handling
 
 # Feature Engineering
-Interaction terms (age × hours worked)
+1. Interaction terms (age × hours worked)
 
-Derived features (capital net = capital gain - capital loss)
+2. Derived features (capital net = capital gain - capital loss)
 
-Polynomial features (age squared)
+3. Polynomial features (age squared)
 
-Multiple encoding strategies (One-Hot, Label, Target encoding)
+4. Multiple encoding strategies (One-Hot, Label, Target encoding)
 
 # Models Implemented
-Linear Models
-Logistic Regression
+1. Linear Models
+   
+3. Logistic Regression
 
 # Ridge Classifier
 
-Tree-Based Models
-Decision Tree
+1. Tree-Based Models
+   
+3. Decision Tree
 
-Random Forest
+4. Random Forest
 
-Gradient Boosting
+5. Gradient Boosting
 
-XGBoost
+6. XGBoost
 
-LightGBM
+7. LightGBM
 
-Evaluation Strategy
+# Evaluation Strategy
 80-20 train-test split with stratified sampling
 
-Hyperparameter tuning via GridSearchCV with 3-fold cross-validation
+1. Hyperparameter tuning via GridSearchCV with 3-fold cross-validation
 
-Performance metrics: Accuracy, Precision, Recall, F1-Score
+2. Performance metrics: Accuracy, Precision, Recall, F1-Score
 
-Comparative analysis: Baseline vs Enhanced features
+3. Comparative analysis: Baseline vs Enhanced features
 
-📈 Results
+# 📈 Results
 Key Findings
 Feature Engineering Impact:
 
-Linear models: +0.8% average accuracy improvement
+**Linear models:** +0.8% average accuracy improvement
 
-Tree-based models: -0.1% average accuracy change
+**Tree-based models:** -0.1% average accuracy change
 
 Confirmed tree models automatically discover feature interactions
 
-Best Performing Models:
+# Best Performing Models:
 
-Best Linear: Logistic Regression (82.56% accuracy)
+**Best Linear:** Logistic Regression (82.56% accuracy)
 
-Best Tree: LightGBM (87.56% accuracy)
+**Best Tree:** LightGBM (87.56% accuracy)
 
-Accuracy Gap: 5.0 percentage points in favor of tree models
+**Accuracy Gap:** 5.0 percentage points in favor of tree models
 
-Feature Importance:
+# Feature Importance:
 
-Educational level: strongest correlation with income (r = +0.334)
+**Educational level:** strongest correlation with income (r = +0.334)
 
-Age and hours worked: moderate positive correlations
+**Age and hours worked:** moderate positive correlations
 
-Capital gains: largest percentage difference between income groups
+**Capital gains:** largest percentage difference between income groups
